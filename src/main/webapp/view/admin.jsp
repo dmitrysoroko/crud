@@ -16,7 +16,7 @@
     <h2 align="center">ADD</h2>
     <form class="form-inline" method="post" action="/add.action">
         <div class="form-group">
-            <label>Login: <input class="form-control" name="user.nickname"></label><br>
+            <label>Login: <input class="form-control" name="user.login"></label><br>
             <label>Password: <input class="form-control" name="user.password" type="password"></label><br>
             <label>Role_id: <input class="form-control" name="user.role_id"></label><br>
             <button type="submit" class="btn btn-default">Add</button>
@@ -30,7 +30,7 @@
     <form class="form-inline" method="post" action="/update.action">
         <div class="form-group">
             <label>Id: <input class="form-control" name="user.id"></label><br>
-            <label>Login: <input class="form-control" name="user.nickname"></label><br>
+            <label>Login: <input class="form-control" name="user.login"></label><br>
             <label>Password: <input class="form-control" name="user.password" type="password"></label><br>
             <label>Role_id: <input class="form-control" name="user.role_id"></label><br>
             <button type="submit" class="btn btn-default">Update</button>
