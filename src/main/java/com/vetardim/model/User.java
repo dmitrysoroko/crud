@@ -7,16 +7,17 @@ import javax.persistence.*;
 public class User {
 
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "role_id")
+    private int role_id;
+    @Id
     @Column(name = "id")
     private int id;
     @Column(name = "login")
     private String login;
     @Column(name = "password")
     private String password;
-    @Column(name = "role_id")
-    private int role_id;
 
     public User (){}
 
@@ -24,11 +25,11 @@ public class User {
 
     public void setId(int id) { this.id = id; }
 
-    public String getNickname() {
+    public String getLogin() {
         return login;
     }
 
-    public void setNickname(String login) {
+    public void setLogin(String login) {
         this.login = login;
     }
 
