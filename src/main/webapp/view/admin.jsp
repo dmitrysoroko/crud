@@ -14,30 +14,28 @@
 <body>
 <div class="container">
     <h2 align="center">ADD</h2>
-    <form class="form-inline" role="form" method="post" action="/add.action">
+    <form class="form-inline" method="post" action="/add.action">
         <div class="form-group">
-            <label>Nickname: <input type="name" class="form-control" name="user.nickname"></label>
+            <label>Login: <input class="form-control" name="user.nickname"></label><br>
+            <label>Password: <input class="form-control" name="user.password" type="password"></label><br>
+            <label>Role_id: <input class="form-control" name="user.role_id"></label><br>
+            <button type="submit" class="btn btn-default">Add</button>
         </div>
-        <div class="form-group">
-            <label>Password: <input type="password" class="form-control" name="user.password"></label>
-        </div>
-        <button type="submit" class="btn btn-default">Add</button>
+
     </form>
 </div>
 
 <div class="container">
     <h2 align="center">Update</h2>
-    <form class="form-inline" role="form" method="post" action="/update.action">
+    <form class="form-inline" method="post" action="/update.action">
         <div class="form-group">
-            <label>Id: <input type="name" class="form-control" name="user.id"></label>
+            <label>Id: <input class="form-control" name="user.id"></label><br>
+            <label>Login: <input class="form-control" name="user.nickname"></label><br>
+            <label>Password: <input class="form-control" name="user.password" type="password"></label><br>
+            <label>Role_id: <input class="form-control" name="user.role_id"></label><br>
+            <button type="submit" class="btn btn-default">Update</button>
         </div>
-        <div class="form-group">
-            <label>Nickname: <input type="name" class="form-control" name="user.nickname"></label>
-        </div>
-        <div class="form-group">
-            <label>Password: <input type="password" class="form-control" name="user.password"></label>
-        </div>
-        <button type="submit" class="btn btn-default">Update</button>
+
     </form>
 </div>
 
@@ -47,17 +45,19 @@
         <thead>
         <tr>
             <th>id</th>
-            <th>nickname</th>
+            <th>login</th>
             <th>password</th>
+            <th>role_id</th>
             <th>action</th>
         </tr>
         </thead>
-        <tbody>
-        <s:iterator value="usersList" var="user">
+        <tbody
+        <s:iterator value="usersList">
             <tr>
                 <td><s:property value="id"></s:property></td>
-                <td><s:property value="nickname"></s:property></td>
+                <td><s:property value="login"></s:property></td>
                 <td><s:property value="password"></s:property></td>
+                <td><s:property value="role_id"></s:property></td>
                 <td>
                     <a href="/delete.action?id=<s:property value="id"/>">delete</a>
                 </td>
